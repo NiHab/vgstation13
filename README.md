@@ -1,40 +1,21 @@
-# vgstation
-
-[Website](http://ss13.pomf.se) - [Code](http://gitlab.com/vgstation/vgstation/) - [IRC](irc://irc.rizon.net/vgstation) (irc.rizon.net #vgstation)
+# /egg/station 13
 
 ---
 
 ### GETTING THE CODE
 The simplest way to obtain the code is using the gitlab .zip feature.
 
-Click [here](https://gitlab.com/vgstation/vgstation/repository/archive.zip?ref=Bleeding-Edge) to get the latest stable code as a .zip file, then unzip it to wherever you want.
-
-The more complicated and easier to update method is using git.  You'll need to download git or some client from [here](http://git-scm.com/).  When that's installed, right click in any folder and click on "Git Bash".  When that opens, type in:
-
-    git clone https://gitlab.com/vgstation/vgstation.git
-
-(Hint: hold down ctrl and press insert to paste into git bash)
-
-This will take a while to download, but it provides an easier method for updating.
-
-#### Branches
-
-Keep in mind that we have multiple branches for various purposes.
-
-* *master* - "stable" code, it was used on the main server until we realized we like living on the edge  :sunglasses:.
-* *Bleeding-Edge* - The latest unstable code.  _Please do any development against this branch!_
-
 ### INSTALLATION
 
 First-time installation should be fairly straightforward.  First, you'll need BYOND installed.  You can get it from [here](http://www.byond.com/).
 
-This is a sourcecode-only release, so the next step is to compile the server files.  Open vgstation13.dme by double-clicking it, open the Build menu, and click compile.  This'll take a little while, and if everything's done right you'll get a message like this:
+This is a sourcecode-only release, so the next step is to compile the server files.  Open eggstation13.dme by double-clicking it, open the Build menu, and click compile.  This'll take a little while, and if everything's done right you'll get a message like this:
 
-    saving vgstation13.dmb (DEBUG mode)
+    saving eggstation13.dmb (DEBUG mode)
 
-    vgstation13.dmb - 0 errors, 0 warnings
+    eggstation13.dmb - 0 errors, 0 warnings
 
-If you see any errors or warnings, something has gone wrong - possibly a corrupt download or the files extracted wrong, or a code issue on the main repo.  Ask on IRC.
+If you see any errors or warnings, something has gone wrong - possibly a corrupt download or the files extracted wrong, or a code issue on the main repo, complain about it to Anti-Spiral in the /egg/ thread.
 
 To use the SQLite preferences, rename players2_empty.sqlite to players2.sqlite
 
@@ -48,9 +29,15 @@ You'll also want to edit admins.txt to remove the default admins and add your ow
 
 where the BYOND key must be in lowercase and the admin rank must be properly capitalized.  There are a bunch more admin ranks, but these two should be enough for most servers, assuming you have trustworthy admins.
 
-Finally, to start the server, run Dream Daemon and enter the path to your compiled vgstation13.dmb file.  Make sure to set the port to the one you  specified in the config.txt, and set the Security box to 'Trusted'.  Then press GO and the server should start up and be ready to join.
+Finally, to start the server, run Dream Daemon and enter the path to your compiled eggstation13.dmb file.  Make sure to set the port to the one you  specified in the config.txt, and set the Security box to 'Trusted'.  Then press GO and the server should start up and be ready to join.
 
 ---
+
+### Why does this exist?
+
+This map was created so that /egg/ could make its own station from scratch starting from a shuttle with initial supplies.
+Cargo is currently functional and will arrive at the red airlock. 
+Comms are also operational because of a telecommunications array sitting in the top left corner of the map.
 
 ### UPDATING
 
@@ -77,7 +64,7 @@ For a basic setup, simply copy every file from config-example/ to config/ and th
 
 ### SQL Setup
 
-The SQL backend for the library and stats tracking requires a MySQL server.  (Linux servers will need to put libmysql.so into the same directory as vgstation13.dme.)  Your server details go in /config/dbconfig.txt.
+The SQL backend for the library and stats tracking requires a MySQL server.  (Linux servers will need to put libmysql.so into the same directory as eggstation13.dme.)  Your server details go in /config/dbconfig.txt.
 
 The database is automatically installed during server startup, but you need to ensure the database and user are present and have necessary permissions.
 

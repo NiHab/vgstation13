@@ -18,13 +18,13 @@ var/global/list/all_money_accounts = list()
 		station_account.owner_name = "[station_name()] Station Account"
 		station_account.account_number = rand(11111, 99999)
 		station_account.remote_access_pin = rand(1111, 9999)
-		station_account.money = 5000
+		station_account.money = 50000
 
 		//create an entry in the account transaction log for when it was created
 		var/datum/transaction/T = new()
 		T.target_name = station_account.owner_name
 		T.purpose = "Account creation"
-		T.amount = 5000
+		T.amount = 50000
 		T.date = "2nd April, [game_year]"
 		T.time = "11:24"
 		T.source_terminal = "Biesel GalaxyNet Terminal #277"
@@ -40,7 +40,7 @@ var/global/list/all_money_accounts = list()
 	department_account.owner_name = "[department] Account"
 	department_account.account_number = rand(11111, 99999)
 	department_account.remote_access_pin = rand(1111, 9999)
-	department_account.money = 5000
+	department_account.money = 50000
 
 	//create an entry in the account transaction log for when it was created
 	var/datum/transaction/T = new()

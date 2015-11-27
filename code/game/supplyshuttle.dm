@@ -2,7 +2,7 @@
 #define SUPPLY_DOCKZ 2          //Z-level of the Dock.
 #define SUPPLY_STATIONZ 1       //Z-level of the Station.
 
-#define SUPPLY_TAX 10 // Credits to charge per order.
+#define SUPPLY_TAX 0 // Credits to charge per order.
 var/datum/controller/supply_shuttle/supply_shuttle = new
 
 var/list/mechtoys = list(
@@ -146,8 +146,8 @@ var/list/mechtoys = list(
 	processing = 1
 	processing_interval = 300
 	//supply points have been replaced with MONEY MONEY MONEY - N3X
-	var/credits_per_slip = 2
-	var/credits_per_crate = 5
+	var/credits_per_slip = 0
+	var/credits_per_crate = 0
 	//var/credits_per_plasma = 0.5 // 2 plasma for 1 point
 	//control
 	var/ordernum
